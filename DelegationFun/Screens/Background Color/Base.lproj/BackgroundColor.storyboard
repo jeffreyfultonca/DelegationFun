@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Background Color View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BackgroundColorViewController" customModule="DelegationFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-hf-U6z" userLabel="Welcome Message Label">
+                                <rect key="frame" x="16" y="40" width="288" height="21"/>
+                                <string key="text">Hello, I'm a BackgroundColorViewController who'd like to display a color as my background. Unfortunately I don't know how to select colors, I only know how to display them. However my friend ColorPickerViewController knows how to pick colors. Would you like to see him?</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLF-0p-dBu" userLabel="Present Color Picker Button">
+                                <rect key="frame" x="16" y="81" width="288" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Yes, show me the color picker please!"/>
+                                <connections>
+                                    <action selector="showMeColorPickerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FXK-P7-dtn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NFP-hf-U6z" secondAttribute="trailing" id="5XH-8S-GaH"/>
+                            <constraint firstItem="NFP-hf-U6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q65-KY-Lxu"/>
+                            <constraint firstItem="qLF-0p-dBu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Uri-gE-PyK"/>
+                            <constraint firstItem="NFP-hf-U6z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="afl-tb-qu4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qLF-0p-dBu" secondAttribute="trailing" id="ahh-yw-va7"/>
+                            <constraint firstItem="qLF-0p-dBu" firstAttribute="top" secondItem="NFP-hf-U6z" secondAttribute="bottom" constant="20" id="nUa-Lr-90K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
